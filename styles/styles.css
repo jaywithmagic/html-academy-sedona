@@ -12,13 +12,120 @@
     src: url("fonts/pt-sans-bold.woff2") format("woff2");
     font-display: swap;
   }
+
+.page {
+    background-color: #F2F2F2;
+ } 
   
- body {
+html {
+    height: 100%;
+    width: 1200px;
+    margin: 0 auto;
+  }
+
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+
+    min-height: 100%;
+
     font-family: "PT Sans", sans-serif;
     font-size: 18px;
     line-height: 21px;
+    background-color: #fff;
     color: #333333;
   }
+
+ul, ol, li {
+    margin: 0;
+    padding: 0;
+}
+
+.main-conteiner {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+    }
+
+
+.navigation {
+    display: flex;
+    width: 1060px;
+    height: 66px;
+    margin: 0 auto;
+}
+.navigation-list {
+    width: 345px;
+    margin-left: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    
+}
+.user-navigation {
+    margin-left: auto;
+}
+
+
+.page-footer-container {
+    display: flex;
+    height: 120px;
+    justify-content: space-between;
+    padding: 0 72px; 
+}
+
+/* c a t a l o g*/
+.main-inner h1 {
+    margin: 0;
+}
+
+.breadcrumbs {
+    margin-top: 5px;
+    margin-bottom: 45px;
+}
+
+.catalog{
+    padding: 0 72px;
+}
+.filter {
+    padding: 35px 72px 80px 72px;    
+}
+.catalog-filter {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.catalog-filter-group {
+    width: 200px;
+    margin-right: 17px;
+}
+.catalog-filter-price {
+    width: 287px;
+    margin-left: 95px;
+}
+.filter-buttons {
+    width: 160px;
+    margin-left: 64px; 
+}
+.catalog-sort {
+    display: flex;
+    justify-content: space-between;
+    margin: 44px 0 53px 0;
+}
+.pagination-nav {
+    display: flex;
+    justify-content: space-between;
+}
+.pagination-list {
+    display: flex;
+}
+.newsletter {
+    text-align: center;
+}
 
 /*кнопки*/
 .button { 
@@ -67,6 +174,9 @@
     font-size: 16px;
     text-transform: uppercase;
 }
+.main-index .newsletter h2 {
+    color: #fff;
+}
 
 /*Заголовки*/
 .page-header {
@@ -114,6 +224,9 @@ h3, h4 {
 }
 
 /*ADVANTAGES*/
+.advantages {
+    text-align: center;
+  }
 .advantages-item-large h3 {
    color: #fff;  
 }
@@ -183,3 +296,6 @@ ol > li.advantages-item:nth-child(4) {
     text-decoration: none;
 }
 
+.footer-social h2, .catalog h2, .catalog h3, .filter h2 {
+    display: none;
+}

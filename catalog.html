@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page"  lang="ru">
 	<head>
 		<meta charset="utf-8">
 		<title>Отели Седоны</title>
@@ -8,7 +8,7 @@
 
 	<body>
 		<header class="page-header">
-			<nav class="main-navigation">
+			<nav class="navigation">
 				<a class="navigation-logo" href="index.html">
 					<img class="page-header-logo" alt="Логотип турагенства" src="images/logo.svg">
 				  </a>
@@ -26,7 +26,8 @@
 			</nav>
 		</header>
 
-		<main class="main-inner">
+		<main class="main-inner main-conteiner">
+
 		<section class="filter">
 			<h2 class="visually-hidden">Фильтр списка гостиниц</h2>
 			<header class="inner-header">
@@ -97,7 +98,7 @@
 						</ul>
 					</fieldset>
 
-					<fieldset class="catalog-filter-group">                                      
+					<fieldset class="catalog-filter-group catalog-filter-price">                                      
 						<legend class="catalog-filter-title">Стоимость, ₽:</legend> 
 							<label class="catalog-filter-label">от
 								<input class="catalog-filter-input" type="number" name="min-price" value="0"> 
@@ -122,28 +123,49 @@
 
 			<section class="catalog">
 				<h2 class="visually-hidden">Результаты поиска</h2>
-        		<p class="catalog-title">Найдено гостиниц: 38</p>
-				<h3 class="visually-hidden">Сортировка и отображение</h3>
-				<form class="sorting-type">                                          
-					<label class="visually-hidden">Сортировка</label>
-					<select class="select-control" id="sorting" name="sorting">
-						<option value="cheap">Сначала дешёвые</option>
-						<option value="popular">Сначала популярное</option>           			
-						<option value="expensive">Сначала дорогое</option>
-					</select>
-					<button class="visually-hidden" type="submit">Отсортировать продукты</button>
-				</form>
-			
-				<a class="button button-light" href="#">
-					<span class="visually-hidden">Показать плитку</span>
-				</a>
-				<a class="button" href="#">
-					<span class="visually-hidden">Показать слайдшоу</span>
-				</a>
-				<a class="button" href="#">
-					<span class="visually-hidden">Показать список</span>
-				</a>
-			
+				<div class="catalog-sort">
+					
+					<p class="catalog-title">Найдено гостиниц: 38</p>
+
+					<h3 class="visually-hidden">Сортировка и отображение</h3>
+
+					<details class="select catalog-select">
+					<summary class="select-button">Сначала дешёвые</summary>
+					<ul class="select-menu">
+					<li class="select-item select-item-active">
+						<a class="select-option" href="#">Сначала дешёвые</a>
+					</li>
+					<li class="select-item">
+						<a class="select-option" href="#">Сначала дорогие</a>
+					</li>
+					<li class="select-item">
+						<a class="select-option" href="#">Сначала популярные</a>
+					</li>
+					<li class="select-item">
+						<a class="select-option" href="#">Сначала комфортные</a>
+					</li>
+					</ul>
+         			</details>
+				
+					<ul class="view">
+						<li class="view-item view-item-active">
+						  <a class="view-link">
+							<span class="visually-hidden">Карточками</span>
+						  </a>
+						</li>
+						<li class="view-item">
+						  <a class="view-link" href="#">
+							<span class="visually-hidden">Слайдами</span>
+						  </a>
+						</li>
+						<li class="view-item">
+						  <a class="view-link" href="#">
+							<span class="visually-hidden">Списком</span>
+						  </a>
+						</li>
+					</ul>
+				</div>
+
 				<h3 class="visually-hidden">Список гостиниц</h3>
 				<ul class="product-list">
 					<li class="product-item">
@@ -196,8 +218,10 @@
 					</li>
 				</ul>
 
+				<div class="pagination">
 				<button class="button show-more button-large" type="button">Загрузить ещё</button>
 
+				<div class="pagination-nav">
 				<ul class="pagination-list">
 					<li class="pagination-item">
 						<a class="button pagination-link pagination-current">1</a>
@@ -228,6 +252,8 @@
 						</select>
 						<button class="visually-hidden" type="submit">Выбрать количество</button>
 				</form>
+				</div>
+				</div>
 			</section>
 		
 
@@ -244,6 +270,7 @@
 		</main>
 
 		<footer class="page-footer">
+			<div class="page-footer-container">
 				<section class="footer-social"><h2 class="visually-hidden">Социальные сети</h2>
 					<ul class="footer-social-list">
 						<li class="footer-social-item">
@@ -263,10 +290,11 @@
 						</li>
 					  </ul>
 				</section>
-
+			
 				<a class="footer-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
 
 				<a class="footer-logo" href="https://htmlacademy.ru/"><img class="htmlacademy-logo" alt="Логотип html academy" src="images/html-academy.svg"></a>
+			</div>
 		</footer>
 	</body>
 </html>
