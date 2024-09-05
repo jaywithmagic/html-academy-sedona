@@ -37,18 +37,41 @@ body {
     color: #333333;
   }
 
+a {
+    text-decoration: none;
+}
+h1 {
+    font-size: 60px;
+    line-height: normal;
+    font-weight: bold;
+}
+h2, .advantages .section-title {
+    color: #000;
+    font-size: 30px;
+    line-height: 36px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+h3, h4 {
+    color: #000;
+    font-size: 24px;
+    line-height: 28px;
+    font-weight: bold;
+    text-transform: uppercase;
+    vertical-align: top;
+}
+
 ul, ol, li {
     margin: 0;
     padding: 0;
+    list-style: none;
 }
 
 .main-conteiner {
-  flex-grow: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
-    }
-
+}
 
 .navigation {
     display: grid;
@@ -62,14 +85,18 @@ ul, ol, li {
 }
 
 .navigation-list {
-    width: 345px;
-    margin-left: 30px;
+    margin-right: auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
     align-items: center;
     padding: 0;
 }
+
+.navigation-link {
+    padding: 0 17px;
+}
+
 .user-navigation {
     display: flex;
     flex-wrap: wrap;
@@ -79,7 +106,7 @@ ul, ol, li {
 .search {
     width: 40px;
     height: 40px;
-    background-color: green;
+    background-color: rgb(255, 22, 243);
 }
 .navigation-favorites {
     width: 40px;
@@ -87,19 +114,21 @@ ul, ol, li {
     background-color: rgb(65, 2, 124);
 }
 .user-navigation .button {
+    color: #fff;
+    background-color: #756257;   
+    text-align: center;
+    text-transform: uppercase;
     height: 38px;
     width: 160px;
-    background-color: #756257;
     border-radius: 4px;
-    text-align: center;
 }
 
 
-.page-footer-container {
-    display: flex;
-    height: 120px;
-    justify-content: space-between;
-    padding: 0 72px; 
+
+/* i n d e x */
+.section-title {
+    margin: 63px auto 31px auto;
+    width: 720px;
 }
 .section-text {
     margin: 0 auto 80px auto;
@@ -116,29 +145,42 @@ ol {
 ol > .advantages-item:first-child {
     grid-column: span 3;
     grid-row: span 2;
+
     display: grid;
     grid-template-columns: repeat(3, 400px);
     grid-template-rows: repeat(2, 384px);
+    width: 1200;
+}
+.advantages-img {
+    display: block;
+    grid-column: span 2;
 }
 
-.advantages-item .advantages-list {
+.advantages-list-inner {
     display: grid;
     grid-template-columns: repeat(3, 400px);
 }
-ol > .advantages-item:first-child .advantages-img {
-    grid-column: span 2;
-}
+
 
 ol > .advantages-item:nth-child(2) {
     grid-column: span 3;
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: repeat(3, 400px);
 }
+
+.advantages-item-large {
+     color: #fff;
+     background-color: #83B3D3; 
+ }
 
 .advantages-title {
     width: 250px;
     margin: 98px auto 0 auto;
 }
+.advantages-item-large .advantages-title {
+    color: #fff;
+}
+
 .advantages-text {
     width: 250px;
     margin-left: auto;
@@ -157,11 +199,17 @@ ul.advantages-list .advantages-title {
 /* c a t a l o g*/
 .main-inner h1 {
     margin: 0;
+    padding: 0;
 }
 
 .breadcrumbs {
     margin-top: 5px;
     margin-bottom: 45px;
+    display: flex;
+}
+
+.breadcrumbs-item {
+    margin-right: 11px;
 }
 
 .catalog{
@@ -261,6 +309,8 @@ ul.advantages-list .advantages-title {
 .pagination-nav {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
 }
 .pagination-list {
     display: flex;
@@ -311,10 +361,7 @@ ul.advantages-list .advantages-title {
     padding-top: 9px;
     padding-bottom: 10px;
 }
-.pagination-current {
-    color: #000;
-    background-color: #f2f2f2;
-}
+
 .catalog-filter-input {
     color: rgba(128, 128, 128, 0.3);
     font-size: 18px;
@@ -344,29 +391,7 @@ ul.advantages-list .advantages-title {
     text-align: left;
     text-decoration: none;
 }
-a {
-    text-decoration: none;
-}
-h1 {
-    font-size: 60px;
-    line-height: normal;
-    font-weight: bold;
-}
-h2, .advantages .section-title {
-    color: #000;
-    font-size: 30px;
-    line-height: 36px;
-    font-weight: bold;
-    text-transform: uppercase;
-}
-h3, h4 {
-    color: #000;
-    font-size: 24px;
-    line-height: 28px;
-    font-weight: bold;
-    text-transform: uppercase;
-    vertical-align: top;
-}
+
 .breadcrumbs-link {
     color: #fff;
     font-size: 16px;
@@ -381,13 +406,7 @@ h3, h4 {
 .advantages {
     text-align: center;
   }
-.advantages-item-large h3 {
-   color: #fff;  
-}
-.advantages-item-large {
-    color: #fff;
-    background-color: #83B3D3; 
-}
+
 .advantages-text {
     font-size: 18px;
     line-height: 21px;
@@ -416,15 +435,18 @@ ol > li.advantages-item:nth-child(4) {
     margin-bottom: 56px;
 }
 .hotel-search-button {
+    font-size: 20px;
+    line-height: 36px;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: #756257;
+
+    border-radius: 10px;
+    border: none;
+
     width: 575px;
     height: 60px;
     margin-bottom: 2px;
-    font-size: 20px;
-    line-height: 36px;
-    color: #fff;
-    background-color: #756257;
-    border-radius: 10px;
-    border: none;
 }
 
 
@@ -439,6 +461,9 @@ ol > li.advantages-item:nth-child(4) {
 }
 
 .newsletter-text {
+    font-size: 22px;
+    line-height: 26px;
+    font-weight: 400;
     margin-bottom: 46px;   
 }
 
@@ -456,6 +481,13 @@ ol > li.advantages-item:nth-child(4) {
     background-color: #f2f2f2;
 }
 .newsletter-button {
+    color: #fff;
+    background-color: #83B3D3;
+    text-transform: uppercase;
+    font-size: 20px;
+    line-height: 26px;
+    font-weight: 400;
+
     height: 60px;
     width: 200px;    
     border: none;
@@ -473,8 +505,6 @@ ol > li.advantages-item:nth-child(4) {
     margin: 0;
     margin-bottom: 46px;
 }
-
-
 .main-index .newsletter {
     color: #fff;
     background-color: #83B3D3;
@@ -484,14 +514,13 @@ ol > li.advantages-item:nth-child(4) {
 
 
 /*CATALOG*/
+
 .filter {
     color: #fff;
     background-color: #83B3D3;
     background: url("../images/background/filter.jpg");
     background-size: cover;
 }
-
-
 .product-card-title {
     line-height: normal;
     text-transform: none;
@@ -517,11 +546,37 @@ ol > li.advantages-item:nth-child(4) {
 
 
 /*FOOTER*/
+.page-footer-container {
+    display: flex;
+    height: 120px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 72px; 
+}
+.footer-social-list {
+display: flex;
+justify-content: space-between;
+align-items: center;
+flex-wrap: wrap;
+width: 107px;
+}
+.footer-social-item {
+    background-color: gray;
+    width: 20px;
+    height: 18px;
+    margin-right: 4px;
+    margin-bottom: 4px;
+}
+
 .footer-phone {
     color: #000;
     font-size: 40px;
     line-height: 40px;
     text-decoration: none;
+    text-align: center;
+
+    flex-basis: 720px;
+    margin: 0 auto;
 }
 
 
