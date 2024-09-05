@@ -51,32 +51,29 @@ ul, ol, li {
 
 
 .navigation {
-    display: flex;
+    display: grid;
+    grid-template-columns: 139px auto 264px;
     width: 1060px;
-    height: 66px;
+    height: 70px;
     margin: 0 auto;
 }
+
 .navigation-list {
-    margin-left: 30px;
+    margin-right: auto;
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
-    list-style: none; 
+    height: 70px;
+    padding: 0;
 }
+
 .navigation-link {
     padding: 0 17px;
 }
+
 .user-navigation {
     margin-left: auto;
-    display: flex;
-    align-items: center;
 }
-.user-navigation a {
-    min-width: 42px;
-}
-
 
 
 
@@ -194,6 +191,7 @@ ol > .advantages-item:nth-child(2) {
 .pagination-list {
     display: flex;
 }
+
 .pagination-item {
     margin-right: 8px;
     color: #fff;
