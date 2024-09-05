@@ -51,13 +51,6 @@ ul, ol, li {
 
 
 .navigation {
-<<<<<<< Updated upstream
-    display: flex;
-    width: 1060px;
-    height: 66px;
-    margin: 0 auto;
-}
-=======
     display: grid;
     grid-template-columns: 139px auto auto;
     width: 1060px;
@@ -68,23 +61,14 @@ ul, ol, li {
     width: 139px;
 }
 
->>>>>>> Stashed changes
 .navigation-list {
     width: 345px;
     margin-left: 30px;
     display: flex;
-<<<<<<< Updated upstream
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    list-style: none;
-    
-=======
     flex-wrap: wrap;
     justify-content: flex-start;
     align-items: center;
     padding: 0;
->>>>>>> Stashed changes
 }
 .user-navigation {
     display: flex;
@@ -95,7 +79,7 @@ ul, ol, li {
 .search {
     width: 40px;
     height: 40px;
-    background-color: rgb(255, 22, 243);
+    background-color: green;
 }
 .navigation-favorites {
     width: 40px;
@@ -117,8 +101,6 @@ ul, ol, li {
     justify-content: space-between;
     padding: 0 72px; 
 }
-<<<<<<< Updated upstream
-=======
 .section-text {
     margin: 0 auto 80px auto;
     width: 720px;
@@ -171,7 +153,6 @@ ul.advantages-list .advantages-title {
 
 
 
->>>>>>> Stashed changes
 
 /* c a t a l o g*/
 .main-inner h1 {
@@ -212,8 +193,6 @@ ul.advantages-list .advantages-title {
     justify-content: space-between;
     margin: 44px 0 53px 0;
 }
-<<<<<<< Updated upstream
-=======
 .view {
     display: flex;    
 }
@@ -279,7 +258,6 @@ ul.advantages-list .advantages-title {
     height: 60px;
 }
 
->>>>>>> Stashed changes
 .pagination-nav {
     display: flex;
     justify-content: space-between;
@@ -287,11 +265,6 @@ ul.advantages-list .advantages-title {
 .pagination-list {
     display: flex;
 }
-<<<<<<< Updated upstream
-.newsletter {
-    text-align: center;
-}
-=======
 
 
 .pagination-item {
@@ -321,7 +294,6 @@ ul.advantages-list .advantages-title {
     text-align: center;
 }
 
->>>>>>> Stashed changes
 
 /*кнопки*/
 
@@ -332,20 +304,9 @@ ul.advantages-list .advantages-title {
     font-weight: bold;
     text-transform: uppercase;
 }
-<<<<<<< Updated upstream
-.hotel-search-button, .product-card-button {
-    background-color: #756257;
-}
-.hotel-search-button {
-    font-size: 20px;
-    line-height: 36px;
-}
-.product-card-button, .favorites-button {
-=======
 
 
 .favorites-button {
->>>>>>> Stashed changes
     font-size: 16px; 
     padding-top: 9px;
     padding-bottom: 10px;
@@ -440,8 +401,6 @@ ol > li.advantages-item:nth-child(1) {
 ol > li.advantages-item:nth-child(4) {
     background-color: rgba(131, 179, 211, 0.2);
 }
-<<<<<<< Updated upstream
-=======
 .hotel-search {
     text-align: center;
     padding: 91px 240px;
@@ -522,7 +481,6 @@ ol > li.advantages-item:nth-child(4) {
     background: url("../images/background/subscribe.jpg");
     background-size: cover;
 }
->>>>>>> Stashed changes
 
 
 /*CATALOG*/
@@ -566,11 +524,6 @@ ol > li.advantages-item:nth-child(4) {
     text-decoration: none;
 }
 
-<<<<<<< Updated upstream
-.footer-social h2, .catalog h2, .catalog h3, .filter h2 {
-    display: none;
-}
-=======
 
 
 .visually-hidden {
@@ -587,4 +540,3 @@ ol > li.advantages-item:nth-child(4) {
   img {
     object-fit: cover;
   }
->>>>>>> Stashed changes
