@@ -2,14 +2,14 @@
     font-family: "PT Sans";
     font-style: normal;
     font-weight: 400;
-    src: url("fonts/pt-sans-regular.woff2") format("woff2");
+    src: url("../fonts/ptsans-400.woff2") format("woff2");
     font-display: swap;
 }
 @font-face {
     font-family: "PT Sans";
     font-style: normal;
     font-weight: 700;
-    src: url("fonts/pt-sans-bold.woff2") format("woff2");
+    src: url("../fonts/ptsans-700.woff2") format("woff2");
     font-display: swap;
   }
 
@@ -51,23 +51,63 @@ ul, ol, li {
 
 
 .navigation {
+<<<<<<< Updated upstream
     display: flex;
     width: 1060px;
     height: 66px;
     margin: 0 auto;
 }
+=======
+    display: grid;
+    grid-template-columns: 139px auto auto;
+    width: 1060px;
+    margin: 0 auto;
+}
+.navigation-logo {
+    height: 70px;
+    width: 139px;
+}
+
+>>>>>>> Stashed changes
 .navigation-list {
     width: 345px;
     margin-left: 30px;
     display: flex;
+<<<<<<< Updated upstream
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     list-style: none;
     
+=======
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0;
+>>>>>>> Stashed changes
 }
 .user-navigation {
-    margin-left: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: center;
+}
+.search {
+    width: 40px;
+    height: 40px;
+    background-color: rgb(255, 22, 243);
+}
+.navigation-favorites {
+    width: 40px;
+    margin-right: 20px;
+    background-color: rgb(65, 2, 124);
+}
+.user-navigation .button {
+    height: 38px;
+    width: 160px;
+    background-color: #756257;
+    border-radius: 4px;
+    text-align: center;
 }
 
 
@@ -77,6 +117,61 @@ ul, ol, li {
     justify-content: space-between;
     padding: 0 72px; 
 }
+<<<<<<< Updated upstream
+=======
+.section-text {
+    margin: 0 auto 80px auto;
+    width: 720px;
+}
+
+/*сетка*/
+ol {
+    display: grid;
+    grid-template-columns: repeat(3, 400px);
+    grid-template-rows: repeat(4, 384px);
+}
+
+ol > .advantages-item:first-child {
+    grid-column: span 3;
+    grid-row: span 2;
+    display: grid;
+    grid-template-columns: repeat(3, 400px);
+    grid-template-rows: repeat(2, 384px);
+}
+
+.advantages-item .advantages-list {
+    display: grid;
+    grid-template-columns: repeat(3, 400px);
+}
+ol > .advantages-item:first-child .advantages-img {
+    grid-column: span 2;
+}
+
+ol > .advantages-item:nth-child(2) {
+    grid-column: span 3;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+.advantages-title {
+    width: 250px;
+    margin: 98px auto 0 auto;
+}
+.advantages-text {
+    width: 250px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+ul.advantages-list .advantages-title {
+    margin-top: 184px;
+   }
+
+
+
+
+
+>>>>>>> Stashed changes
 
 /* c a t a l o g*/
 .main-inner h1 {
@@ -98,6 +193,7 @@ ul, ol, li {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
 }
 .catalog-filter-group {
     width: 200px;
@@ -116,6 +212,74 @@ ul, ol, li {
     justify-content: space-between;
     margin: 44px 0 53px 0;
 }
+<<<<<<< Updated upstream
+=======
+.view {
+    display: flex;    
+}
+.view-item {
+    width: 48px;
+    height: 48px;
+    margin-right: 8px;
+    background-color: aquamarine;
+}
+.view-item:last-child {
+    margin-right: 0;
+}
+
+.product-list {
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 340px);
+    gap: 10px 18px;
+}
+.product-item {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 140px 160px;
+}
+.product-card-link {
+    grid-column: span 2;
+}
+.product-item p {
+    grid-column: span 2;
+}
+.product-card-button {
+    width: 133px;
+    padding-top: 9px;
+    padding-bottom: 10px; 
+
+    text-align: center;
+    color: #FFF;  
+    background-color: #756257;
+    border-radius: 4px;
+    font-size: 16px; 
+    text-transform: uppercase;
+    font-weight: 700;
+}
+.favorites-button {
+    width: 141px;
+    padding-top: 9px;
+    padding-bottom: 10px; 
+
+    text-align: center;
+    color: #FFF;  
+    background-color: #83B3D3;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px; 
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.show-more-button {
+    display: block;
+    margin: 30px auto;
+    width: 620px;
+    height: 60px;
+}
+
+>>>>>>> Stashed changes
 .pagination-nav {
     display: flex;
     justify-content: space-between;
@@ -123,21 +287,44 @@ ul, ol, li {
 .pagination-list {
     display: flex;
 }
+<<<<<<< Updated upstream
+.newsletter {
+    text-align: center;
+}
+=======
+
+
+.pagination-item {
+    margin-right: 8px;
+    color: #fff;
+    background-color: #83B3D3;
+    text-align: center
+}
+.pagination-item:last-child {
+    margin-right: 0;
+}
+.pagination-item-current {
+    color: #000;
+    background-color: #f2f2f2;
+}
+.pagination-item-current a {
+    color: #000;
+    background-color: #f2f2f2;
+}
+.pagination-link {
+    display: block;
+    width: 55px;
+    height: 55px;
+}
+
 .newsletter {
     text-align: center;
 }
 
+>>>>>>> Stashed changes
+
 /*кнопки*/
-.button { 
-    background-color: #83B3D3;
-    color: #fff;
-    font-family: inherit;
-    font-size: 16px;
-    font-weight: bold;
-    text-transform: uppercase;
-    border: none;
-    text-decoration: none;
-}
+
 .user-navigation .button {
     background-color: #756257;
     font-size: 16px;
@@ -145,6 +332,7 @@ ul, ol, li {
     font-weight: bold;
     text-transform: uppercase;
 }
+<<<<<<< Updated upstream
 .hotel-search-button, .product-card-button {
     background-color: #756257;
 }
@@ -153,6 +341,11 @@ ul, ol, li {
     line-height: 36px;
 }
 .product-card-button, .favorites-button {
+=======
+
+
+.favorites-button {
+>>>>>>> Stashed changes
     font-size: 16px; 
     padding-top: 9px;
     padding-bottom: 10px;
@@ -247,6 +440,89 @@ ol > li.advantages-item:nth-child(1) {
 ol > li.advantages-item:nth-child(4) {
     background-color: rgba(131, 179, 211, 0.2);
 }
+<<<<<<< Updated upstream
+=======
+.hotel-search {
+    text-align: center;
+    padding: 91px 240px;
+}
+.hotel-search-title {
+    margin-top: 0;
+    margin-bottom: 29px;
+}
+.hotel-search-text {
+    font-size: 22px;
+    line-height: 26px;
+    margin-top: 0;
+    margin-bottom: 56px;
+}
+.hotel-search-button {
+    width: 575px;
+    height: 60px;
+    margin-bottom: 2px;
+    font-size: 20px;
+    line-height: 36px;
+    color: #fff;
+    background-color: #756257;
+    border-radius: 10px;
+    border: none;
+}
+
+
+
+.newsletter {
+    padding: 94px 200px;
+}
+
+.newsletter-title {
+    margin: 0;
+    margin-bottom: 29px;
+}
+
+.newsletter-text {
+    margin-bottom: 46px;   
+}
+
+.newsletter-form {
+    margin: 0 auto;
+    display: flex;
+}
+.newsletter-field {
+    height: 60px;
+    width: 600px;
+    margin: 0;
+    padding: 0 19px 0 22px;    
+    border: none;
+    border-radius:  10px 0 0 10px;
+    background-color: #f2f2f2;
+}
+.newsletter-button {
+    height: 60px;
+    width: 200px;    
+    border: none;
+    border-radius: 0 10px 10px 0;
+    margin: 0;
+    padding: 0;
+}
+.newsletter-inner {
+    padding: 73px 128px 140px 128px;
+    text-align: center;
+}
+.newsletter-inner .newsletter-title {
+    color: #000;
+    background-color: #fff;
+    margin: 0;
+    margin-bottom: 46px;
+}
+
+
+.main-index .newsletter {
+    color: #fff;
+    background-color: #83B3D3;
+    background: url("../images/background/subscribe.jpg");
+    background-size: cover;
+}
+>>>>>>> Stashed changes
 
 
 /*CATALOG*/
@@ -281,12 +557,6 @@ ol > li.advantages-item:nth-child(4) {
     font-size: 18px;
 }
 
-.main-index .newsletter {
-    color: #fff;
-    background-color: #83B3D3;
-    background: url("../images/background/subscribe.jpg");
-    background-size: cover;
-}
 
 /*FOOTER*/
 .footer-phone {
@@ -296,6 +566,25 @@ ol > li.advantages-item:nth-child(4) {
     text-decoration: none;
 }
 
+<<<<<<< Updated upstream
 .footer-social h2, .catalog h2, .catalog h3, .filter h2 {
     display: none;
 }
+=======
+
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
+
+  img {
+    object-fit: cover;
+  }
+>>>>>>> Stashed changes
