@@ -11,17 +11,18 @@
     font-weight: 700;
     src: url("../fonts/ptsans-700.woff2") format("woff2");
     font-display: swap;
-  }
+}
 
 .page {
     background-color: #F2F2F2;
- } 
+    font-family: "PT Sans";
+} 
   
 html {
     height: 100%;
     width: 1200px;
     margin: 0 auto;
-  }
+}
 
 body {
     margin: 0;
@@ -35,7 +36,7 @@ body {
     line-height: 21px;
     background-color: #fff;
     color: #333333;
-  }
+}
 
 ul, ol, li {
     margin: 0;
@@ -43,29 +44,47 @@ ul, ol, li {
     list-style: none;
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    font-family: "PT Sans", sans-serif;
+}
+
 img {
     display: block;
     max-width: 100%;
     height: auto;
     object-fit: cover;
-  }
+}
+
+.page-header {
+    height: 65px;
+}
 
 .main-conteiner {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-    }
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 
 
 .navigation {
     display: grid;
     grid-template-columns: 139px auto 264px;
     width: 1060px;
-    height: 70px;
+    height: 65px;
     margin: 0 auto;
 }
 
+.navigation-logo {
+    z-index: 1;
+}
+
 .navigation-list {
+    margin-left: 30px;
     margin-right: auto;
     display: flex;
     justify-content: space-between;
@@ -321,7 +340,9 @@ img {
     justify-content: space-between;
     align-items: center;
     margin-top: 44px;
+    margin-bottom: 53px;
 }
+
 
 .catalog-title {
     color: #000;
@@ -368,6 +389,84 @@ img {
 .view-item:last-child {
     margin-right: 0;
 }
+
+/* С П И С О К  Г О С Т И Н И Ц */
+
+.product-list {
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 340px);
+    gap: 10px 18px;
+}
+
+.product-item {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 133px 133px;
+    justify-content: space-between;
+    column-gap: 16px;
+}
+
+.product-card-link {
+    grid-column: span 2;
+}
+
+.product-card-title {
+    margin: 0;
+    padding-top: 16px;
+
+    color: #000;
+    font-size: 24px;
+}
+
+.product-card-type {
+    width: 133px;
+}
+
+.product-card-price {
+    margin-left: auto;
+    width: 133px;
+}
+
+.product-card-button {
+    box-sizing: border-box;
+    width: 133px;
+    height: 37px;
+    border-radius: 4px;
+    padding: 9px 0;
+
+    background-color: #756257;
+    color: #fff;
+
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.favorites-button {
+    width: 133px;
+    height: 37px;
+    border: none;
+    border-radius: 4px;
+
+    background-color: #83B3D3;
+    color: #fff;
+
+    font-family: "PT Sans";
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.rating-value {
+    grid-column: span 2;
+}
+
+/*СПИСОК ГОСТИНИЦ*/
+
+
 
 .show-more-button {
     display: block;
@@ -491,34 +590,20 @@ img {
 
 
 
-.product-list {
-    margin: 0;
-    display: grid;
-    grid-template-columns: repeat(3, 340px);
-    gap: 10px 18px;
-}
-.product-item {
-    padding: 20px;
-}
+
+
+
 
 /*кнопки*/
 
 
-
-.product-card-button, .favorites-button {
-    font-size: 16px; 
-    padding-top: 9px;
-    padding-bottom: 10px;
-}
 
 .catalog-filter-input {
     color: rgba(128, 128, 128, 0.3);
     font-size: 18px;
     background: transparent;
 }
-.filter-button-reset {
-    background: transparent;
-}
+
 .rating-value {
     background-color: #f2f2f2;
     font-size: 16px;
@@ -538,42 +623,12 @@ img {
     text-align: left;
     text-decoration: none;
 }
-a {
-    text-decoration: none;
-}
-h1 {
-    font-size: 60px;
-    line-height: normal;
-    font-weight: bold;
-}
-h2 {
-    color: #000;
-    font-size: 30px;
-    line-height: 36px;
-    font-weight: bold;
-    text-transform: uppercase;
-}
-h3, h4 {
-    color: #000;
-    font-size: 24px;
-    line-height: 28px;
-    font-weight: bold;
-    text-transform: uppercase;
-    vertical-align: top;
-}
+
+
 .breadcrumbs-link {
     color: #fff;
     font-size: 16px;
 }
-.product-card-title {
-    line-height: normal;
-    text-transform: none;
-    text-align: left;
-}
-
-
-
-
 
 
 
@@ -675,15 +730,9 @@ h3, h4 {
     background: url("../images/background/filter.jpg");
     background-size: cover;
 }
-.product-card-title {
-    line-height: normal;
-    text-transform: none;
-    text-align: left;
-}
-.product-card-link p {
-    font-size: 18px;
-    line-height: normal;
-}
+
+
+
 
 .catalog-filter-title {
     font-size: 20px;
