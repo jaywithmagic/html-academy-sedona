@@ -195,6 +195,74 @@
 			</div>
 		</footer>
 		
+		<div class="modal-container">
+
+				<section class="modal-content">
+
+					<form action="https://echo.htmlacademy.ru/" method="get">
+						<fieldset class="modal-field-group">
+							<legend class="modal-title">Поиск гостиницы в Седоне</legend>
+
+							<button class="modal-close-button">
+								<span class="visually-hidden">Закрыть</span>
+							</button>
+
+							<ul class="modal-list">
+
+								<li class="modal-item">
+									<label class="modal-item-title">Дата заезда:</label>
+									<input class="modal-input-date" type="date" name="check-in-date" id="check-in-date" value="2020-07-27">								
+								</li>
+
+								<li class="modal-item">
+									<label>Дата выезда:</label>
+									<input class="modal-input-date" type="date" name="check-out-date" id="check-out-date" value="2021-09-01">
+								</li>
+
+								<li class="modal-item">
+									<label for="adults-number">Взрослые:</label>
+									<form id="adults-number" action="https://echo.htmlacademy.ru/" method="get">
+										<div class="input-number-container">						
+											<button class="modal-min-button">
+												<span class="visually-hidden">Уменьшить количество</span>
+											</button>
+											<input class="modal-input-number" type="number" name="adults" id="adults" value="2">
+											<button class="modal-max-button">
+												<span class="visually-hidden">Увеличить количество</span>
+											</button>
+										</div>
+									</form>
+								</li>
+
+								<li class="modal-item">
+									<label for="kids-number">Дети:</label>
+									<form id="kids-number" action="https://echo.htmlacademy.ru/" method="get">
+										<div class="input-number-container">						
+											<button class="modal-min-button">
+												<span class="visually-hidden">Уменьшить количество</span>
+											</button>
+											<input class="modal-input-number" type="number" name="kids" id="kids" value="1">
+											<button class="modal-max-button">
+												<span class="visually-hidden">Увеличить количество</span>
+											</button>
+										</div>
+									</form>
+								</li>
+
+							</ul>
+
+						</fieldset>
+
+						<button class="modal-send-button">
+							<span class="">Найти</span>
+						</button>
+
+					</form>
+
+
+				</section>
+
+		</div>
 
 	</body>
 
