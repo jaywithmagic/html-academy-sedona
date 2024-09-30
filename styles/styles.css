@@ -444,8 +444,49 @@ img {
 }
 
 .control-label {
-    font-size: 18px;
+    position: relative;
+    display: flex;
 }
+
+.control-title {
+    font-size: 18px;
+    padding-left: 19px;
+}
+
+.control-mark {
+    display: block;
+    position: relative;
+    box-sizing: border-box;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    background-color: #f2f2f2;
+    border-radius: 4px;
+}
+
+.control-input[type="checkbox"]:checked + .control-mark {
+    background: #f2f2f2 url(../images/icons/check.svg) no-repeat center;
+}
+
+.control-input[type="checkbox"]:hover + .control-mark {
+    opacity: 0.6;
+}
+
+.control-input:focus + .control-mark {
+    outline: 3px solid #83B3D3;
+
+}
+
+.control-input[type="radio"] + .control-mark {
+    border-radius: 50%;
+}
+
+.control-input[type="radio"]:checked + .control-mark {
+    background-color: #3F5E72;
+    border: 5px solid #fff;
+    
+}
+
 
 .catalog-filter-infrastructure {
     margin: 0;
@@ -538,6 +579,7 @@ img {
 
 .filter-button-reset:active {
     opacity: 0.3;
+    outline: none;
 }
 
 .catalog-sort {
@@ -1328,9 +1370,19 @@ img {
     border: 0;
     clip: rect(0 0 0 0);
     overflow: hidden;
-  }
+}
+
+
+
+
+
+
+
+
+
 
 .modal-container {
+    display: none;
     position: fixed;
     z-index: 2;
     
@@ -1386,6 +1438,7 @@ img {
 }
 
 .modal-list {
+    position: relative;
     padding-top: 60px;
 
     display: grid;
@@ -1399,6 +1452,7 @@ img {
 }
 
 .modal-item {
+    position: relative;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -1440,6 +1494,14 @@ img {
     border-radius: 4px;
 }
 
+.input-number-container:hover {
+    background-color: #e5e5e5;
+}
+
+.input-number-container:focus {
+    outline: 3px solid #83B3D3;
+}
+
 .input-number-container > * {
     padding: 0;
 }
@@ -1464,7 +1526,7 @@ input[type=number] {
     font-weight: 700;
     line-height: 40px;
     text-align: center;
-    background-color: #f2f2f2;
+    background-color: transparent;
 }
 
 .modal-min-button {
@@ -1503,4 +1565,58 @@ input[type=number] {
     font-weight: 700;
     text-align: center;
     text-transform: uppercase;
+}
+
+.modal-send-button:hover {
+    background-color: #68A2CA;
+}
+
+.modal-send-button:focus {
+    outline:  3px solid #756257;
+}
+
+.modal-send-button:active {
+    color: rgba(255, 255, 255, 0.3);
+    outline: none;
+}
+
+
+
+.modal-item:first-child::after {
+    position: absolute;
+    width: 420px;
+    height: 30px;
+    content: "Мы не можем отправить вас в прошлое.";
+    left: 155px;
+    top: 44px;
+
+    color: #FF5757;
+    font-size: 16px;
+    line-height: 40px;
+    font-weight: 400;
+}
+
+.modal-item:nth-child(2)::after {
+    position: absolute;
+    width: 420px;
+    height: 30px;
+    content: "На эти даты есть свободные номера. Пока есть.";
+    left: 155px;
+    top: 44px;
+
+    color: #333333;
+    font-size: 16px;
+    line-height: 40px;
+    font-weight: 400;
+}
+
+.modal-item:nth-child(4)::before {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    left: 55px;
+    content: "";
+    background: #83B3D3 url(../images/icons/info.svg) no-repeat center;
+    border-radius: 50%;
+
 }
