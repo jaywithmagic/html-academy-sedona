@@ -1382,7 +1382,7 @@ img {
 
 
 .modal-container {
-    display: none;
+    
     position: fixed;
     z-index: 2;
     
@@ -1433,8 +1433,29 @@ img {
 
     border: none;
     border-radius: 50%;
+}
 
-    background: #f2f2f2 url(../images/icons/modal-close.svg) no-repeat center;
+.modal-close-button::after {
+    position: relative;
+    left: 16px;
+    content: "";
+    display: block;
+    width: 13px;
+    height: 13px;
+    background: url(../images/icons/modal-close.svg) no-repeat center;
+}
+
+.modal-close-button:hover {
+    background-color: #E6E6E6;
+}
+
+.modal-close-button:focus:not(:active) {
+    background-color: #E6E6E6;
+    outline: 3px solid #83B3D3;
+}
+
+.modal-close-button:active::after {
+    opacity: 0.3;
 }
 
 .modal-list {
@@ -1494,12 +1515,18 @@ img {
     border-radius: 4px;
 }
 
-.input-number-container:hover {
+.modal-input-date:hover {
     background-color: #e5e5e5;
 }
 
-.input-number-container:focus {
+.modal-input-date:focus {
     outline: 3px solid #83B3D3;
+}
+
+.modal-input-date:active {
+    outline: 2px solid #000;
+    outline-offset: -2px;
+    background-color: #fff;
 }
 
 .input-number-container > * {
@@ -1548,6 +1575,23 @@ input[type=number] {
     background: url(../images/icons/plus.svg) no-repeat center;
     opacity: 0.3;
 }
+
+.modal-min-button:hover, .modal-max-button:hover {
+    opacity: 1;
+}
+
+.modal-min-button:focus, .modal-max-button:focus {
+    outline: 3px solid #83B3D3;
+    outline-offset: -10.5px;
+    opacity: 1;
+    border-radius: 13px;
+}
+
+.modal-min-button:active, .modal-max-button:active {
+    opacity: 0.3;
+    outline: none;
+}
+
 
 .modal-send-button {
     box-sizing: border-box;
